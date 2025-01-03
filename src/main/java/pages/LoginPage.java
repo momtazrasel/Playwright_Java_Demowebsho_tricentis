@@ -16,10 +16,22 @@ public class LoginPage {
 
     public void loginToApplication() {
         page.navigate("https://demowebshop.tricentis.com/");
+    }
+
+    public void clickLoginLink() {
         page.click(LoginObject.LOGIN_LINK);
+    }
+
+    public void loginWithValidCredentials() {
         BaseTest.takeScreenshot(page, "login_success");
         page.fill(LoginObject.USERNAME_INPUT, "rasel.qups@gmail.com");
         page.fill(LoginObject.PASSWORD_INPUT, "password123");
+        page.click(LoginObject.LOGIN_BUTTON);
+        test.pass("Login performed successfully.");
+        BaseTest.takeScreenshot(page, "login_success");
+    }
+
+    public void clickOnLoginButton() {
         page.click(LoginObject.LOGIN_BUTTON);
         test.pass("Login performed successfully.");
         BaseTest.takeScreenshot(page, "login_success");

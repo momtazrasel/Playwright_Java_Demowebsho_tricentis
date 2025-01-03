@@ -36,6 +36,7 @@ public class BaseTest {
     public static void login() {
         LoginPage loginPage = new LoginPage(page, test);
         loginPage.loginToApplication();
+//        loginPage.loginWithValidCredentials();
     }
 
     public static void tearDown() {
