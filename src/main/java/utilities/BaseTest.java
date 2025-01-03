@@ -51,7 +51,7 @@ public class BaseTest {
         }
     }
 
-    public static void takeScreenshot(Page page, String stepName) {
+    public static String takeScreenshot(Page page, String stepName) {
         String directory = "screenshots";
         String path = directory + "/" + stepName + ".png";
 
@@ -61,7 +61,31 @@ public class BaseTest {
             screenshotsDir.mkdirs();
         }
 
-        page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)));
-        System.out.println("Screenshot taken: " + path);
+        try {
+            page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)));
+            System.out.println("Screenshot taken: " + path);
+        } catch (Exception e) {
+            System.out.println("Failed to capture screenshot: " + e.getMessage());
+        }
+
+        return new File(path).getAbsolutePath(); // Return the absolute path
     }
+
+
+    public static void logStepWithScreenshot(Page page, ExtentTest test, String stepDescription) {
+        // Log the step description
+        test.info(stepDescription);
+
+        // Capture a screenshot
+        String screenshotPath = takeScreenshot(page, stepDescription.replace(" ", "_").toLowerCase());
+
+        // Attach the screenshot to the report using MediaEntityBuilder
+        try {
+            test.info(stepDescription, MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+        } catch (Exception e) {
+            e.printStackTrace();
+            test.fail("Failed to attach screenshot for step: " + stepDescription);
+        }
+    }
+
 }

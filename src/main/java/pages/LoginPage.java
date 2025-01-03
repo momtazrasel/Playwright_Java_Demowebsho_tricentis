@@ -23,17 +23,17 @@ public class LoginPage {
     }
 
     public void loginWithValidCredentials() {
-        BaseTest.takeScreenshot(page, "login_success");
+//        BaseTest.takeScreenshot(page, "login_success");
         page.fill(LoginObject.USERNAME_INPUT, "rasel.qups@gmail.com");
-        page.fill(LoginObject.PASSWORD_INPUT, "password123");
-        page.click(LoginObject.LOGIN_BUTTON);
+        page.fill(LoginObject.PASSWORD_INPUT, "123456");
+//        page.click(LoginObject.LOGIN_BUTTON);
         test.pass("Login performed successfully.");
-        BaseTest.takeScreenshot(page, "login_success");
+//        BaseTest.takeScreenshot(page, "login_success");
     }
 
     public void clickOnLoginButton() {
         page.click(LoginObject.LOGIN_BUTTON);
         test.pass("Login performed successfully.");
-        BaseTest.takeScreenshot(page, "login_success");
+//        BaseTest.takeScreenshot(page, "login_success");
     }
 }

@@ -4,6 +4,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.microsoft.playwright.Page;
 import objects.RegisterObject;
 import utilities.BaseTest;
+import utilities.ReusableMethod;
 
 public class RegisterPage extends BaseTest {
 
@@ -24,7 +25,11 @@ public class RegisterPage extends BaseTest {
         page.fill(RegisterObject.EMAIL, "rasel.qups@gmail.com");
         page.fill(RegisterObject.PASSWORD, "123456");
         page.fill(RegisterObject.CONFIRM_PASSWORD, "123456");
-        page.click(RegisterObject.REGISTER_BUTTON);
+
+    }
+    public void verifyEmailAlreadyExistsMessage() {
+        String expectedText = "The specified email already exists";
+        ReusableMethod.verifyTextIsDisplayed(page, test, RegisterObject.EXIST_EMAIL, expectedText, "Email Error Message");
     }
 
 
