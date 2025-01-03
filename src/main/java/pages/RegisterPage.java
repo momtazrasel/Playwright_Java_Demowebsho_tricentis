@@ -17,6 +17,15 @@ public class RegisterPage extends BaseTest {
     public void clickRegisterLink() {
         page.click(RegisterObject.REGISTER_LINK);
     }
+    public void fillAllTheRegisterData() {
+        page.click(RegisterObject.GENDER);
+        page.fill(RegisterObject.FIRST_NAME, "Momtaz");
+        page.fill(RegisterObject.LAST_NAME, "Rasel");
+        page.fill(RegisterObject.EMAIL, "rasel.qups@gmail.com");
+        page.fill(RegisterObject.PASSWORD, "123456");
+        page.fill(RegisterObject.CONFIRM_PASSWORD, "123456");
+        page.click(RegisterObject.REGISTER_BUTTON);
+    }
 
 
 }

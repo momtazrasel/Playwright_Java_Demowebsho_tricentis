@@ -25,8 +25,9 @@ public class RegisterSteps extends BaseTest {
     }
 
     @And("fill up all the register values")
-    public void fillUpAllTheRegisterValues() {
-
+    public void fillUpAllTheRegisterValues() throws InterruptedException {
+        registerPage.fillAllTheRegisterData();
+        Thread.sleep(3000);
     }
 
     @And("click on the register button")
