@@ -2,7 +2,7 @@ package pages;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.microsoft.playwright.Page;
-import objects.LoginObject;
+import objects.RegisterObject;
 import utilities.BaseTest;
 
 public class RegisterPage extends BaseTest {
@@ -14,8 +14,8 @@ public class RegisterPage extends BaseTest {
         this.page = page;
         this.test = test;
     }
-    public void clickGegisterLink() {
-        page.click(LoginObject.LOGIN_LINK);
+    public void clickRegisterLink() {
+        page.click(RegisterObject.REGISTER_LINK);
     }
 
 
