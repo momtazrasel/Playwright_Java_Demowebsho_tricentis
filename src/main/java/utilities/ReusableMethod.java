@@ -62,4 +62,48 @@ public class ReusableMethod {
             throw e;
         }
     }
+
+    public static void clearText(Page page, String locator, String stepDescription, ExtentTest test) {
+        try {
+            // Clear the input field by filling it with an empty string
+            page.fill(locator, "");
+
+            // Log success to Extent Report
+            test.pass(stepDescription + ": Text cleared successfully.");
+
+            // Capture and attach a screenshot
+//            BaseTest.logStepWithScreenshot(page, test, stepDescription);
+        } catch (Exception e) {
+            // Log failure to Extent Report
+            test.fail(stepDescription + ": Failed to clear text. Exception: " + e.getMessage());
+
+            // Capture and attach a screenshot
+//            BaseTest.logStepWithScreenshot(page, test, stepDescription + " (Failure)");
+
+            // Throw the exception to fail the step
+            throw e;
+        }
+    }
+
+    public static void selectFromDropdown(Page page, String locator, String value, String stepDescription, ExtentTest test) {
+        try {
+            // Select the value from the dropdown
+            page.selectOption(locator, value);
+
+            // Log success to Extent Report
+            test.pass(stepDescription + ": Selected value '" + value + "' successfully.");
+
+            // Capture and attach a screenshot
+//            BaseTest.logStepWithScreenshot(page, test, stepDescription);
+        } catch (Exception e) {
+            // Log failure to Extent Report
+            test.fail(stepDescription + ": Failed to select value '" + value + "'. Exception: " + e.getMessage());
+
+            // Capture and attach a screenshot
+//            BaseTest.logStepWithScreenshot(page, test, stepDescription + " (Failure)");
+
+            // Throw the exception to fail the step
+            throw e;
+        }
+    }
 }

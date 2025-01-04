@@ -35,8 +35,9 @@ public class LoginSteps extends BaseTest {
     }
 
     @And("clicks on the login button")
-    public void clicks_on_the_login_button() {
+    public void clicks_on_the_login_button() throws InterruptedException {
         loginPage.clickOnLoginButton();
+        Thread.sleep(2000);
     }
 
     @Then("the user should be redirected to the dashboard")

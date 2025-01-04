@@ -20,5 +20,69 @@ Feature: Register Functionalities
   Scenario: Verify Product Search Functionality
     Given enter a product name in the search bar
     And clicks on the search button
-    Then verify that the credentials are invalid
+    Then verify that the products is displayed
+
+  Scenario: Verify Adding a Product to the Cart
+    Given enter a product name in the search bar
+    And clicks on the search button
+    Then verify that the products is displayed
+    When Click Add to Cart
+
+  Scenario: Verify Updating Cart Quantity
+    Given enter a product name in the search bar
+    And clicks on the search button
+    Then verify that the products is displayed
+    When Click Add to Cart
+    And CLick on shopping cart link
+    And Update the product quantities
+
+  Scenario: Verify Removing a Product from the Cart
+    Given enter a product name in the search bar
+    And clicks on the search button
+    Then verify that the products is displayed
+    When Click Add to Cart
+    And CLick on shopping cart link
+    And Remove the product quantities
+
+  Scenario: Verify Successful Checkout Process
+    Given enter a product name in the search bar
+    And clicks on the search button
+    Then verify that the products is displayed
+    When Click Add to Cart
+    And CLick on shopping cart link
+    And click on the agree checkbox and checkout button
+    And Login with valid credentials
+    And click on the agree checkbox and checkout button
+    And enter billing address
+
+  Scenario: Verify Guest Checkout Functionality
+    Given enter a product name in the search bar
+    And clicks on the search button
+    Then verify that the products is displayed
+    When Click Add to Cart
+    And CLick on shopping cart link
+    And click on the agree checkbox and checkout button
+    And click on the guest checkout button
+    And enter guest billing address
+
+  Scenario: Verify Applying Discount Coupon
+    Given enter a product name in the search bar
+    And clicks on the search button
+    Then verify that the products is displayed
+    When Click Add to Cart
+    And CLick on shopping cart link
+    And apply coupon code
+    And click on the agree checkbox and checkout button
+    And click on the guest checkout button
+    And enter guest billing address
+
+  Scenario: Verify Newsletter Subscription
+    Given enter email in newsletter text field
+    And click on the subscribe button
+    Then verify that the user successfully subscribe
+
+  Scenario: Verify Sorting Products by Price
+    Given enter email in newsletter text field
+    And click on the subscribe button
+    Then verify that the user successfully subscribe
 
