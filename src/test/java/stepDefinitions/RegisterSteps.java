@@ -57,4 +57,25 @@ public class RegisterSteps extends BaseTest {
         ReusableMethod.verifyTextIsDisplayed(page, test, RegisterObject.EXIST_EMAIL, expectedText, "Email Error Message");
 
     }
+
+    @Then("verify that the credentials are invalid")
+    public void verifyThatTheCredentialsAreInvalid() {
+        String expectedText = "Login was unsuccessful. Please correct the errors and try again.";
+        ReusableMethod.verifyTextIsDisplayed(page, test, RegisterObject.LOGIN_ERROR, expectedText, "Invalid Credentials Error Message");
+
+    }
+
+    @Given("enter a product name in the search bar")
+    public void enterAProductNameInTheSearchBar() {
+        ReusableMethod.clickElement(page, test, RegisterObject.SEARCH_BAR, "Search bar");
+        page.fill(RegisterObject.SEARCH_BAR, "Momtaz");
+
+
+    }
+
+    @And("clicks on the search button")
+    public void clicksOnTheSearchButton() {
+        ReusableMethod.clickElement(page, test, RegisterObject.SEARCH_BAR_BUTTON, "Search bar");
+
+    }
 }

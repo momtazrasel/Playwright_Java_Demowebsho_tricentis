@@ -30,6 +30,14 @@ public class LoginPage {
         test.pass("Login performed successfully.");
 //        BaseTest.takeScreenshot(page, "login_success");
     }
+    public void loginWithInValidCredentials() {
+//        BaseTest.takeScreenshot(page, "login_success");
+        page.fill(LoginObject.USERNAME_INPUT, "rasel.qups@gmail.com");
+        page.fill(LoginObject.PASSWORD_INPUT, "12345");
+//        page.click(LoginObject.LOGIN_BUTTON);
+        test.pass("Login performed successfully.");
+//        BaseTest.takeScreenshot(page, "login_success");
+    }
 
     public void clickOnLoginButton() {
         page.click(LoginObject.LOGIN_BUTTON);

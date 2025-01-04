@@ -40,4 +40,26 @@ public class ReusableMethod {
             throw new RuntimeException(stepDescription + " - Click action failed.", e);
         }
     }
+
+    public static void sendKeys(Page page, String locator, String textToEnter, String stepDescription, ExtentTest test) {
+        try {
+            // Fill the input field with the provided text
+            page.fill(locator, textToEnter);
+
+            // Log success to Extent Report
+            test.pass(stepDescription + ": Text '" + textToEnter + "' entered successfully.");
+
+            // Capture and attach a screenshot
+//            BaseTest.logStepWithScreenshot(page, test, stepDescription);
+        } catch (Exception e) {
+            // Log failure to Extent Report
+            test.fail(stepDescription + ": Failed to enter text '" + textToEnter + "'. Exception: " + e.getMessage());
+
+            // Capture and attach a screenshot
+//            BaseTest.logStepWithScreenshot(page, test, stepDescription + " (Failure)");
+
+            // Throw the exception to fail the step
+            throw e;
+        }
+    }
 }

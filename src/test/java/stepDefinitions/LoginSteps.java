@@ -25,8 +25,7 @@ public class LoginSteps extends BaseTest {
 
     @When("the user enters invalid credentials")
     public void the_user_enters_invalid_credentials() {
-        page.fill("input[name='username']", "invalid_user");
-        page.fill("input[name='password']", "wrong_password");
+        loginPage.loginWithInValidCredentials();
     }
 
     @When("the user leaves the username and password fields blank")

@@ -12,4 +12,7 @@ public class RegisterObject {
     public static final String REGISTER_BUTTON = "(//input[@id='register-button'])[1]";
     public static final String REGISTER_COMPLETE_TEXT = "(//div[@class='result'])[1]";
     public static final String EXIST_EMAIL = "(//li[normalize-space()='The specified email already exists'])[1]";
+    public static final String LOGIN_ERROR = "(//span[contains(text(),'Login was unsuccessful. Please correct the errors ')])[1]";
+    public static final String SEARCH_BAR = "(//input[@id='small-searchterms'])[1]";
+    public static final String SEARCH_BAR_BUTTON = "(//input[@class='button-1 search-box-button'])[1]";
 }
