@@ -116,8 +116,8 @@ public class RegisterSteps extends BaseTest {
 
     @And("click on the agree checkbox and checkout button")
     public void clickOnTheAgreeCheckboxAndCheckoutButton() throws InterruptedException {
-        ReusableMethod.clickElement(page, test, RegisterObject.AGREE_CHECKBOX, "Update Button");
-        ReusableMethod.clickElement(page, test, RegisterObject.CHECKOUT_BUTTON, "Update Button");
+        ReusableMethod.clickElement(page, test, RegisterObject.AGREE_CHECKBOX, "Agree Button");
+        ReusableMethod.clickElement(page, test, RegisterObject.CHECKOUT_BUTTON, "Checkout Button");
 
     }
 
@@ -136,46 +136,46 @@ public class RegisterSteps extends BaseTest {
             ReusableMethod.sendKeys(page, RegisterObject.CITY, "New York","Enter City address", test);
             ReusableMethod.sendKeys(page, RegisterObject.ADDRESS_ONE, "New York","Enter address", test);
             ReusableMethod.sendKeys(page, RegisterObject.ZIP_CODE, "12356","Enter Zip code", test);
-            ReusableMethod.sendKeys(page, RegisterObject.PHONE_NUM, "12356","Enter Zip code", test);
+            ReusableMethod.sendKeys(page, RegisterObject.PHONE_NUM, "12356","Phone", test);
 //        ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_SAVE_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_METHOD_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_METHOD_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_INFO_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.CONFIRM_BUTTON, "Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_CONTINUE_BUTTON, "Shipping Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_SAVE_CONTINUE_BUTTON, "Shipping Save Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_METHOD_CONTINUE_BUTTON, "Shipping Method Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_METHOD_CONTINUE_BUTTON, "Payment Method Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_INFO_CONTINUE_BUTTON, "Payment Continue Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.CONFIRM_BUTTON, "Confirm Button");
         }catch (Exception e){
-            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_SAVE_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_METHOD_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_METHOD_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_INFO_CONTINUE_BUTTON, "Continue Button");
-            ReusableMethod.clickElement(page, test, RegisterObject.CONFIRM_BUTTON, "Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_CONTINUE_BUTTON, "Shipping Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_SAVE_CONTINUE_BUTTON, "Shipping Save Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_METHOD_CONTINUE_BUTTON, "Shipping Method Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_METHOD_CONTINUE_BUTTON, "Payment Method Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_INFO_CONTINUE_BUTTON, "Payment Continue Continue Button");
+            ReusableMethod.clickElement(page, test, RegisterObject.CONFIRM_BUTTON, "Confirm Button");
         }
 
     }
 
     @And("click on the guest checkout button")
     public void clickOnTheGuestCheckoutButton() {
-        ReusableMethod.clickElement(page, test, RegisterObject.GUEST_CHECKOUT, "Update Button");
+        ReusableMethod.clickElement(page, test, RegisterObject.GUEST_CHECKOUT, "Guest Checkout Button");
     }
 
     @And("enter guest billing address")
     public void enterGuestBillingAddress() throws InterruptedException {
-        ReusableMethod.sendKeys(page, RegisterObject.BILLING_FIRST_NAME, "Momtaz","Enter billing first name", test);
-        ReusableMethod.sendKeys(page, RegisterObject.BILLING_LAST_NAME, "Rasel","Enter billing last name", test);
-        ReusableMethod.sendKeys(page, RegisterObject.BILLING_EMAIL, "rasel.qups@gmail.com","Enter email", test);
+        ReusableMethod.sendKeys(page, RegisterObject.BILLING_FIRST_NAME, "xyz","Enter billing first name", test);
+        ReusableMethod.sendKeys(page, RegisterObject.BILLING_LAST_NAME, "xyz","Enter billing last name", test);
+        ReusableMethod.sendKeys(page, RegisterObject.BILLING_EMAIL, "xyz@gmail.com","Enter email", test);
         ReusableMethod.selectFromDropdown(page,RegisterObject.COUNTRY_DROPDOWN,"United States","Select Country", test);
         ReusableMethod.sendKeys(page, RegisterObject.CITY, "New York","Enter City address", test);
         ReusableMethod.sendKeys(page, RegisterObject.ADDRESS_ONE, "New York","Enter address", test);
         ReusableMethod.sendKeys(page, RegisterObject.ZIP_CODE, "12356","Enter Zip code", test);
-        ReusableMethod.sendKeys(page, RegisterObject.PHONE_NUM, "12356","Enter Zip code", test);
-        ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_CONTINUE_BUTTON, "Continue Button");
-        ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_SAVE_CONTINUE_BUTTON, "Continue Button");
-        ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_METHOD_CONTINUE_BUTTON, "Continue Button");
-        ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_METHOD_CONTINUE_BUTTON, "Continue Button");
-        ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_INFO_CONTINUE_BUTTON, "Continue Button");
-        ReusableMethod.clickElement(page, test, RegisterObject.CONFIRM_BUTTON, "Continue Button");
+        ReusableMethod.sendKeys(page, RegisterObject.PHONE_NUM, "12356","Phone", test);
+        ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_CONTINUE_BUTTON, "Shipping Continue Button");
+        ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_SAVE_CONTINUE_BUTTON, "Shipping Save Continue Button");
+        ReusableMethod.clickElement(page, test, RegisterObject.SHIPPING_METHOD_CONTINUE_BUTTON, "Shipping Method Continue Button");
+        ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_METHOD_CONTINUE_BUTTON, "Payment Method Continue Button");
+        ReusableMethod.clickElement(page, test, RegisterObject.PAYMENT_INFO_CONTINUE_BUTTON, "Payment Continue Continue Button");
+        ReusableMethod.clickElement(page, test, RegisterObject.CONFIRM_BUTTON, "Confirm Button");
 
 
     }
@@ -200,7 +200,47 @@ public class RegisterSteps extends BaseTest {
     @Then("verify that the user successfully subscribe")
     public void verifyThatTheUserSuccessfullySubscribe() {
         String expectedText = "Thank you for signing up! A verification email has been sent. We appreciate your interest.";
-        ReusableMethod.verifyTextIsDisplayed(page, test, RegisterObject.NEWSLETTER_SUCCESS_TEXT, expectedText, "Product List");
+        ReusableMethod.verifyTextIsDisplayed(page, test, RegisterObject.NEWSLETTER_SUCCESS_TEXT, expectedText, "Expected Text");
+
+    }
+
+    @Given("the user navigates to the computer tab")
+    public void theUserNavigatesToTheComputerTab() throws InterruptedException {
+        ReusableMethod.hoverOverElement(page, test, RegisterObject.COMPUTERS_TAB, "Computer Tab");
+        Thread.sleep(2000);
+        ReusableMethod.hoverOverElement(page, test, RegisterObject.COMPUTERS_OPTION, "Select Desktop");
+//        ReusableMethod.clickElement(page, test, RegisterObject.COMPUTERS_OPTION, "Select Desktop");
+
+    }
+
+    @And("Select Price Low to High sorting option")
+    public void selectPriceLowToHighSortingOption() {
+        ReusableMethod.selectFromDropdown(page,RegisterObject.SORT_BY_DROPDOWN,"Price: Low to High","Select price", test);
+
+    }
+
+    @And("click on the logout button")
+    public void clickOnTheLogoutButton() {
+        ReusableMethod.clickElement(page, test, RegisterObject.LOGOUT_LINK, "Logout Link");
+    }
+
+    @When("click on the displayed product")
+    public void clickOnTheDisplayedProduct() {
+        ReusableMethod.clickElement(page, test, RegisterObject.PRODUCT, "Product");
+    }
+
+    @And("product share with your friends")
+    public void productShareWithYourFriends() {
+        ReusableMethod.clickElement(page, test, RegisterObject.EMAIL_FRIEND_BUTTON, "Email button");
+        ReusableMethod.sendKeys(page, RegisterObject.FRIEND_EMAIL_TEXT_FIELD, "xyz@gmail.com","Enter friend email", test);
+        ReusableMethod.sendKeys(page, RegisterObject.YOUR_EMAIL_TEXT_FIELD, "yxz@gmail.com","Enter user email", test);
+        ReusableMethod.clickElement(page, test, RegisterObject.SEND_EMAIL_BUTTON, "Send Email button");
+    }
+
+    @And("product add and remove from compare list")
+    public void productAddAndRemoveFromCompareList() {
+        ReusableMethod.clickElement(page, test, RegisterObject.ADD_TO_COMPARE_LIST_BUTTON, "Add to compare button");
+        ReusableMethod.clickElement(page, test, RegisterObject.REMOVE_BUTTON, "Remove button");
 
     }
 }

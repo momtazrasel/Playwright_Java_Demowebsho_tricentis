@@ -45,4 +45,12 @@ public class RegisterObject {
     public static final String NEWSLETTER_SUCCESS_TEXT = "(//div[@id='newsletter-result-block'])[1]";
     public static final String COMPUTERS_TAB = "(//a[normalize-space()='Computers'])[1]";
     public static final String COMPUTERS_OPTION = "(//a[@class='hover'][normalize-space()='Desktops'])[1]";
+    public static final String LOGOUT_LINK = "(//a[normalize-space()='Log out'])[1]";
+    public static final String SORT_BY_DROPDOWN = "(//select[@id='products-orderby'])[1]";
+    public static final String EMAIL_FRIEND_BUTTON = "(//input[@value='Email a friend'])[1]";
+    public static final String FRIEND_EMAIL_TEXT_FIELD = "(//input[@id='FriendEmail'])[1]";
+    public static final String YOUR_EMAIL_TEXT_FIELD = "(//input[@id='YourEmailAddress'])[1]";
+    public static final String SEND_EMAIL_BUTTON = "(//input[@name='send-email'])[1]";
+    public static final String ADD_TO_COMPARE_LIST_BUTTON = "(//input[@value='Add to compare list'])[1]";
+    public static final String REMOVE_BUTTON = "(//input[@title='Remove'])[1]";
 }

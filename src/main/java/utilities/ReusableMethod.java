@@ -106,4 +106,30 @@ public class ReusableMethod {
             throw e;
         }
     }
+
+    public static void hoverOverElement(Page page, ExtentTest test, String elementLocator, String stepDescription) {
+        try {
+            // Wait for the element to be visible
+            page.waitForSelector(elementLocator);
+
+            // Perform hover action
+            page.hover(elementLocator);
+
+            // Log success in Extent Report
+            test.pass(stepDescription + " - Mouse hovered over the element successfully.");
+
+            // Attach screenshot for success
+//            BaseTest.logStepWithScreenshot(page, test, stepDescription + " - Mouse hover successful");
+        } catch (Exception e) {
+            // Log failure in Extent Report
+            test.fail(stepDescription + " - Failed to hover over the element.");
+
+            // Attach screenshot for failure
+//            BaseTest.logStepWithScreenshot(page, test, stepDescription + " - Mouse hover failed");
+
+            // Throw exception to fail the test
+            throw new RuntimeException(stepDescription + " - Hover action failed.", e);
+        }
+    }
+
 }
