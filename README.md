@@ -1,5 +1,4 @@
 # Playwright_Java_Cucumber_POM
-# Playwright Java Framework Cucumber
 
 ## Setup Instructions
 
